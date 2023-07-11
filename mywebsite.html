@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <div class="wrapper">
+    <div class="progress-bar"></div>
+
+    <div class="background-animation"></div>
+    <div class="container">
+      <h1>Birthday Guesser</h1>
+      <div class="colorful-line"></div>
+
+      <div class="line"></div>
+      <div class="instructions">
+        <p id="instruction">Multiply your Birthday by 4.</p>
+        <p id="additionalText"></p>
+      </div>
+      <div class="input-container">
+        <input type="text" id="resultInput" class="input-field">
+        <button id="submitButton" class="submit-button" onclick="calculateFinalResult()">Submit</button>
+      </div>
+      <button class="next-button" id="nextButton" onclick="nextStep()">Next</button> 
+      <div class="comment-container">
+        <h2 id="commentHeading"></h2>
+        
+        <input type="text" id="nameInput" class="input-field" placeholder="Your Name">
+        <textarea id="commentInput" class="comment-field" placeholder="Your Comment"></textarea>
+        <button id="commentButton" class="submit-button" onclick="submitComment()">Submit Comment</button>
+      </div>
+    </div>
+  </div>
+  <div class="popup-container" id="popupContainer">
+    <div class="popup-content">
+      <h3 class="popup-title">Congratulations!</h3>
+      <p class="popup-message" id="popupMessage"></p>
+      <button class="popup-close-button" onclick="closePopup()">X</button>
+    </div>
+  </div>
+  
+  <div class="comment-submission-container" id="commentSubmissionContainer">
+    <div class="popup-content">
+      <h3 class="popup-title">Comment Submitted!</h3>
+      <p class="popup-message" id="commentSubmissionMessage"></p>
+    </div>
+  </div>
+  <div class="comment-submission-container" id="commentSubmissionContainer">
+    <div class="popup-content">
+      <h3 class="popup-title">Comment Submitted!</h3>
+      <p class="popup-message" id="commentSubmissionMessage">Your comment</p>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+  <script>
+    // JavaScript code to simulate typewriter effect
+
+    // Function to simulate typewriter effect
+    function typeWriter(text, elementId, delay) {
+      const textElement = document.getElementById(elementId);
+      let index = 0;
+
+      function type() {
+        if (index < text.length) {
+          textElement.textContent += text.charAt(index);
+          index++;
+          setTimeout(type, delay);
+        } else {
+          // Typing completed, reset index
+          index = 0;
+        }
+      }
+
+      type();
+    }
+
+    // Call the typewriter function with desired text and parameters
+    const additionalText = "Please follow the instructions below. Click Next to go to the remaining instructions. It will take only a minute! I appreciate your excitement and will be glad to read your comments.";
+    
+    const additionalTextDelay = 30; // Delay between each character typing
+
+    window.onload = function() {
+      typeWriter(additionalText, "additionalText", additionalTextDelay);
+      nextStep(); // Start the instructions on page load
+    };
+  </script>
+  
+</body>
+</html>
