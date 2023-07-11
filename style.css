@@ -1,0 +1,637 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #000; /* Set the background color to dark black */
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.background-animation {
+  position: absolute;
+  top: calc(20px + 60px + 10px); /* Position below the line */
+  left: 0;
+  width: 100%;
+  height: 1px; /* Height of the line */
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #00ff80); /* Set desired gradient colors */
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+h1 {
+  font-family: 'Your Fancy Font', cursive;
+  font-size: 40px;
+  color: #fff;
+  margin-top: 0;
+  margin-left: 37%;
+
+}
+
+.instructions {
+  margin-bottom: 300px;
+  
+}
+
+
+.instructions p {
+  color: #fff;
+  font-size: 60px;
+  font-family: Monaco, monospace;
+  font-weight: bold;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
+.input-container .input-field {
+  padding: 12px 20px;
+  font-size: 20px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: 300px;
+  position: relative;
+  margin-top: -210px;
+  
+  max-width: 100%;
+  transition: border-color 0.3s ease;
+  font-family: 'Your Fancy Font', cursive;
+  animation: borderAnimation 5s infinite;
+}
+
+.input-container .input-field:focus {
+  border-color: #ff00ff;
+}
+
+.input-container .submit-button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  margin-left: 7px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: auto;
+}
+
+.input-container .submit-button:hover {
+  background-color: #23527c;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.input-container .submit-button:focus {
+  outline: none;
+}
+
+.input-container .submit-button:active {
+  transform: scale(0.95);
+}
+
+
+.comment-container .submit-button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  margin-left: 85px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: auto;
+
+}
+
+.comment-container .submit-button:hover {
+  background-color: #23527c;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.comment-container .submit-button:focus {
+  outline: none;
+}
+
+.comment-container .submit-button:active {
+  transform: scale(0.95);
+}
+
+
+.next-button {
+  margin-top: 10px;
+  padding: 12px 40px;
+  font-size: 16px;
+  position: relative; /* Change the position to relative */
+  top: -265px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 300px;
+}
+
+.next-button:hover {
+  background-color: #23527c;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.next-button:focus {
+  outline: none;
+}
+
+.next-button:active {
+  transform: scale(0.95);
+}
+
+
+/* Your existing CSS code */
+
+/* Your existing CSS code */
+
+/* Your existing CSS code */
+
+.comment-container {
+  position: fixed;
+  top: 80%;
+  left: 10px;
+  transform: translateY(-50%);
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.comment-container.typing-animation {
+  animation: commentTypingAnimation 5s infinite;
+}
+
+@keyframes commentTypingAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
+}
+
+/* Rest of your CSS code */
+
+/* Rest of your CSS code */
+
+
+.comment-container h2 {
+  color: #fff;
+  font-family: 'Your Fancy Font', cursive;
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 60px;
+}
+
+.comment-container .name-container {
+  animation: black-white-animation 2s ease-in-out infinite;
+}
+
+.comment-container .comment-text-container {
+  animation: black-white-animation 2s ease-in-out infinite;
+}
+
+
+.comment-container .input-field {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: 300px;
+  max-width: 100%;
+  transition: border-color 0.3s ease;
+  font-family: 'Your Fancy Font', cursive;
+  animation: borderAnimation 5s infinite;
+}
+
+.comment-container .input-field:focus {
+  border-color: #ff00ff;
+}
+
+.comment-container .comment-field {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: 300px;
+  height: 130px;
+  resize: none;
+  margin-top: 10px;
+  max-width: 100%;
+  transition: border-color 0.3s ease;
+  font-family: 'Your Fancy Font', cursive;
+  animation: borderAnimation 5s infinite;
+}
+
+@keyframes borderAnimation {
+  0% {
+    border-color: #ff00ff;
+  }
+  16% {
+    border-color: #8000ff;
+  }
+  33% {
+    border-color: #00ffff;
+  }
+  50% {
+    border-color: #00ff80;
+  }
+  66% {
+    border-color: #ffff00;
+  }
+  83% {
+    border-color: #ff8000;
+  }
+  100% {
+    border-color: #ff00ff;
+  }
+}
+
+
+.comment-container .comment-field:focus {
+  border-color: #00ffff;
+}
+
+.comment-container .name-container {
+  animation: black-white-animation 2s ease-in-out infinite;
+  background-color: black;
+  color: white;
+}
+
+.comment-container .comment-text-container {
+  animation: black-white-animation 2s ease-in-out infinite;
+  background-color: white;
+  color: black;
+}
+
+
+
+/* CSS for the progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #337ab7;
+  z-index: 9999;
+  transition: width 0.3s ease;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: 36px;
+    line-height: 50px ;
+  }
+  .container {
+    margin-top: 50px;
+
+  }
+  
+}
+
+/* Adjustments for mobile devices */
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 12px;
+  }
+  .instructions p {
+    font-size: 11px;
+  }
+  .input-container .input-field,
+  .comment-container .input-field,
+  .comment-container .comment-field {
+    width: 100%;
+    max-width: 300px;
+  }
+  .input-container .submit-button,
+  .next-button,
+  .comment-container .submit-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  #additionalText {
+    font-family: Monaco, monospace;
+    font-size: 5px;
+    color: #ffffff;
+    margin-top: -120px;
+    position: unset;
+    top: 115px;
+    left: 10px;
+  
+    
+  }
+}
+h1 {
+  font-family: 'Your Fancy Font', cursive;
+  font-size: 40px;
+  color: #ff00ff;
+  margin-top: 10px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  animation: rainbowAnimation 5s linear infinite;
+}
+
+@keyframes rainbowAnimation {
+  0% {
+    color: #ff00ff;
+  }
+  16% {
+    color: #8000ff;
+  }
+  33% {
+    color: #00ffff;
+  }
+  50% {
+    color: #00ff80;
+  }
+  66% {
+    color: #ffff00;
+  }
+  83% {
+    color: #ff8000;
+  }
+  100% {
+    color: #ff00ff;
+  }
+}
+
+#additionalText {
+  font-family: Monaco, monospace;
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: -20px;
+  position: fixed;
+  top: 115px;
+  left: 10px;
+
+  
+}
+
+.colorful-line {
+  position: absolute;
+  top: -2%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #00ff80);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease-in-out infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.popup-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(95, 222, 118, 0.90);
+  
+  padding: 100px;
+  border-radius: 20px;
+  z-index: 9999;
+  font-family: 'Your Fancy Font', cursive;
+  color: rgb(0, 0, 0);
+  
+
+  animation: borderAnimation 5s ease-in-out infinite;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #00ff80);
+  background-size: 400% 400%;
+    /* Add fade-in animation */
+    animation: fadeInAnimation 1s ease-in-out;
+    opacity: 0;
+    
+  }
+  
+  .popup-container.active {
+    
+
+    opacity: 1;
+  }
+  
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+@keyframes borderAnimation {
+  0% {
+    border-color: #ff00ff;
+  }
+  16% {
+    border-color: #8000ff;
+  }
+  33% {
+    border-color: #00ffff;
+  }
+  50% {
+    border-color: #00ff80;
+  }
+  66% {
+    border-color: #ffff00;
+  }
+  83% {
+    border-color: #ff8000;
+  }
+  100% {
+    border-color: #ff00ff;
+  }
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup-title {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.popup-message {
+  font-size: 18px;
+}
+
+/* Animation */
+@keyframes popupAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+.comment-submission-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 9999;
+  font-family: 'Your Fancy Font', cursive;
+  color: #fff;
+  animation: popupAnimation 0.3s ease-in-out;
+}
+
+.comment-submission-container.active {
+  display: block;
+}
+
+.comment-submission-container .popup-content {
+  text-align: center;
+}
+
+.comment-submission-container .popup-title {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.comment-submission-container .popup-message {
+  font-size: 18px;
+}
+
+/* Animation */
+@keyframes popupAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.popup-container1nmpopup2nm {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(95, 222, 118, 0.90);
+  padding: 100px;
+  border-radius: 20px;
+  z-index: 9999;
+  font-family: 'Your Fancy Font', cursive;
+  color: rgb(0, 0, 0);
+  animation: borderAnimation 5s ease-in-out infinite;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #00ff80);
+  background-size: 400% 400%;
+  /* Add fade-in animation */
+  animation: fadeInAnimation 1s ease-in-out;
+  opacity: 0;
+}
+
+.popup-container.active {
+  opacity: 1;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.close-button:before, .close-button:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
+
+.close-button:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
