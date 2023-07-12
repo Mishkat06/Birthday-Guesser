@@ -6,6 +6,8 @@
   
 </head>
 <body>
+  <div class="fancy-text">Created by:</div>
+  <img src="D:\blue.png" alt="Picture" class="picture">
   <div class="wrapper">
     <div class="progress-bar"></div>
 
@@ -16,7 +18,7 @@
 
       <div class="line"></div>
       <div class="instructions">
-        <p id="instruction">Multiply your Birthday by 4.</p>
+        <p id="instruction">Multiply your Birthday by 4</p>
         <p id="additionalText"></p>
       </div>
       <div class="input-container">
@@ -35,12 +37,11 @@
   </div>
   <div class="popup-container" id="popupContainer">
     <div class="popup-content">
+      <button class="close-button" onclick="closePopup()"></button>
       <h3 class="popup-title">Congratulations!</h3>
       <p class="popup-message" id="popupMessage"></p>
-      <button class="popup-close-button" onclick="closePopup()">X</button>
     </div>
   </div>
-  
   <div class="comment-submission-container" id="commentSubmissionContainer">
     <div class="popup-content">
       <h3 class="popup-title">Comment Submitted!</h3>
@@ -88,6 +89,34 @@
       nextStep(); // Start the instructions on page load
     };
   </script>
+  <!-- Place this code inside the <body> tag, at the bottom -->
+<!-- Place this code inside the <body> tag, at the bottom -->
+  <div class="calculator-container">
+    <div class="calculator-line"></div>
+    <input class="calculator-input" type="text" id="calculator-input" readonly>
+    <button class="calculator-button" onclick="handleButtonClick('7')">7</button>
+    <button class="calculator-button" onclick="handleButtonClick('8')">8</button>
+    <button class="calculator-button" onclick="handleButtonClick('9')">9</button>
+    <button class="calculator-button" onclick="handleButtonClick('/')">/</button>
+    <br>
+    <button class="calculator-button" onclick="handleButtonClick('4')">4</button>
+    <button class="calculator-button" onclick="handleButtonClick('5')">5</button>
+    <button class="calculator-button" onclick="handleButtonClick('6')">6</button>
+    <button class="calculator-button" onclick="handleButtonClick('*')">*</button>
+    <br>
+    <button class="calculator-button" onclick="handleButtonClick('1')">1</button>
+    <button class="calculator-button" onclick="handleButtonClick('2')">2</button>
+    <button class="calculator-button" onclick="handleButtonClick('3')">3</button>
+    <button class="calculator-button" onclick="handleButtonClick('-')">-</button>
+    <br>
+    <button class="calculator-button" onclick="handleButtonClick('0')">0</button>
+    <button class="calculator-button" onclick="handleButtonClick('.')">.</button>
+    <button class="calculator-button" onclick="handleButtonClick('=')">=</button>
+    <button class="calculator-button" onclick="handleButtonClick('+')">+</button>
+    <br>
+    <button class="calculator-button" onclick="handleClearClick()">C</button>
+    
+  </div>
   
 </body>
 </html>
