@@ -43,6 +43,7 @@ body {
   text-align: center;
   z-index: 1;
   margin-top: -120px;
+  padding: 10px 20px;
 }
 
 h1 {
@@ -56,7 +57,6 @@ h1 {
 
 .instructions {
   margin-bottom: 230px;
-  
   
 }
 
@@ -134,122 +134,7 @@ h1 {
 }
 
 /*Section 1 responsive: */
-@media only screen and (max-width: 600px) {
-  h1 {
-    font-size: 30px;
-    margin-left: 10%;
-  }
 
-  .instructions p {
-    font-size: 30px;
-    margin-top: 100px;
-  }
-
-  .input-container .input-field {
-    font-size: 16px;
-    width: 80%; /* Adjust width to fit smaller screens */
-    margin-top: -150px;
-  }
-
-  .input-container .submit-button {
-    font-size: 14px;
-  }
-  .comment-container {
-    top: 70%;
-    left: 5px;
-  }
-
-  .comment-container .submit-button {
-    margin-left: 10px;
-    font-size: 14px; /* Adjust font size for smaller screens */
-    padding: 10px 15px; /* Adjust padding for smaller screens */
-  }
-
-  .next-button {
-    top: -230px;
-    width: 80%; /* Adjust width to fit smaller screens */
-    font-size: 14px; /* Adjust font size for smaller screens */
-    padding: 8px 15px; /* Adjust padding for smaller screens */
-  }
-
-  .comment-container h2 {
-    font-size: 20px; /* Adjust font size for smaller screens */
-    margin-left: 30px; /* Adjust margin for smaller screens */
-  }
-
-  .comment-container .input-field,
-  .comment-container .comment-field {
-    width: 90%; /* Adjust width to fit smaller screens */
-    font-size: 14px; /* Adjust font size for smaller screens */
-    padding: 10px 15px; /* Adjust padding for smaller screens */
-  }
-  h1 {
-    font-size: 30px; /* Adjust font size for smaller screens */
-    left: 5px;
-  }
-
-  #additionalText {
-    font-size: 1px; /* Adjust font size for smaller screens */
-    top: 95px;
-    left: 5px;
-  }
-
-  .colorful-line {
-    top: 15%; /* Adjust position for smaller screens */
-  }
-
-  .popup-container, .popup-container1nmpopup2nm {
-    padding: 50px; /* Adjust padding for smaller screens */
-  }
-
-  .popup-title, .comment-submission-container .popup-title {
-    font-size: 20px; /* Adjust font size for smaller screens */
-  }
-
-  .popup-message, .comment-submission-container .popup-message {
-    font-size: 16px; /* Adjust font size for smaller screens */
-  }
-
-  .comment-submission-container {
-    padding: 15px; /* Adjust padding for smaller screens */
-  }
-
-  .close-button {
-    top: 10px; 
-    right: 10px; 
-    width: 20px;
-    height: 20px;
-  }
-  .calculator-container {
-    bottom: 10px;
-    right: 10px;
-    width: 150px; /* Adjust width for smaller screens */
-    padding: 5px; /* Adjust padding for smaller screens */
-  }
-
-  .calculator-input {
-    font-size: 14px; /* Adjust font size for smaller screens */
-    padding: 3px 5px; /* Adjust padding for smaller screens */
-  }
-
-  .calculator-button {
-    font-size: 14px; /* Adjust font size for smaller screens */
-    padding: 3px 5px; /* Adjust padding for smaller screens */
-  }
-
-  .fancy-text {
-    bottom: 200px; 
-    right: 310px; /* Adjust position for smaller screens */
-    font-size: 20px; /* Adjust font size for smaller screens */
-  }
-
-  .picture {
-    top: 380px;
-    left: 340px; /* Adjust position for smaller screens */
-    max-width: 150px; /* Adjust width for smaller screens */
-  }
-
-}
 /*Section 1 responsive:END */
 
 .comment-container .submit-button {
@@ -327,6 +212,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 5px ;
 }
 
 .comment-container.typing-animation {
@@ -843,5 +729,141 @@ h1 {
   top: 580px;
   left: 680px;
   max-width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    margin-left: 10%;
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    margin-top: -120px;
+    padding: 1px;
+  }
+  .instructions p {
+    font-size: 30px;
+    margin-top: 70px;
+  }
+
+  .input-container .input-field {
+    font-size: 12px;
+    width: 40%; /* Adjust width to fit smaller screens */
+    margin-top: -200px;
+  }
+
+  .input-container .submit-button {
+    font-size: 10px;
+  }
+  .comment-container {
+    top: 79%;
+    left: 5px;
+    padding: 1px*1px;
+  }
+  .comment-container input,
+.comment-container textarea {
+  height: 10px; /* Adjust the height as needed */
+}
+
+  .comment-container .submit-button {
+    margin-left: 22px;
+    font-size: 10px; /* Adjust font size for smaller screens */
+    padding: 5px 5px; /* Adjust padding for smaller screens */
+    max-height: 500px;  /* or any other value you want */
+    overflow: auto;   
+  }
+
+  .next-button {
+    top: -280px;
+    width: 80%; /* Adjust width to fit smaller screens */
+    font-size: 14px; /* Adjust font size for smaller screens */
+    padding: 8px 15px; /* Adjust padding for smaller screens */
+  }
+
+  .comment-container h2 {
+    font-size: 15px; /* Adjust font size for smaller screens */
+    margin-left: 10px;
+    padding: 5px;
+     /* Adjust margin for smaller screens */
+  }
+
+  .comment-container .input-field,
+  .comment-container .comment-field {
+    width: 50%; /* Adjust width to fit smaller screens */
+    font-size: 12px; /* Adjust font size for smaller screens */
+    padding: 10px 15px; /* Adjust padding for smaller screens */
+    
+  }
+  h1 {
+    font-size: 17px; /* Adjust font size for smaller screens */
+    margin-top: 1px;
+    margin-left: 1px;
+  }
+
+  #additionalText {
+    font-size: 9px; /* Adjust font size for smaller screens */
+    top: 75px;
+    left: 5px;
+  }
+
+  .colorful-line {
+    top: 2.5%; /* Adjust position for smaller screens */
+  }
+
+  .popup-container, .popup-container1nmpopup2nm {
+    padding: 10px 50px; /* Adjust padding for smaller screens */
+  }
+
+  .popup-title, .comment-submission-container .popup-title {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .popup-message, .comment-submission-container .popup-message {
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+
+  .comment-submission-container {
+    padding: 5px; /* Adjust padding for smaller screens */
+  }
+
+  .close-button {
+    top: 10px; 
+    right: 10px; 
+    width: 20px;
+    height: 20px;
+  }
+  .calculator-container {
+    bottom:-87px;
+    right: 10px;
+    width: 140px; /* Adjust width for smaller screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .calculator-input {
+    font-size: 10px; /* Adjust font size for smaller screens */
+    padding: 3px 4px; /* Adjust padding for smaller screens */
+  }
+
+  .calculator-button {
+    font-size: 10px; /* Adjust font size for smaller screens */
+    padding: 12px ; /* Adjust padding for smaller screens */
+    width: 20px; /* Adjust width for smaller buttons */
+    height: 9px;
+  }
+
+  .fancy-text {
+    bottom: 672px; 
+    right: 30px; /* Adjust position for smaller screens */
+    font-size: 12px; /* Adjust font size for smaller screens */
+  }
+
+  .picture {
+    top: 20px;
+    left: 190px; /* Adjust position for smaller screens */
+    max-width: 130px; /* Adjust width for smaller screens */
+  }
+
 }
 
