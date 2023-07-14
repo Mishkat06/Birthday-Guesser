@@ -1,5 +1,5 @@
   var instructions = [
-    "Step 1: Multiply your Birthday by 4 \uD83D\uDE0D",
+    "Step 1: Multiply your Birthday date by 4 \uD83D\uDE0D",
     "Step 2: Add 7 with the result \uD83D\uDC48",
     "Step 3: Multiply the result by 3 \uD83E\uDD1F",
     "Step 4: Add your Birthday date to the result \u270A",
@@ -236,59 +236,38 @@
   typeWriter(commentHeadingText, "commentHeading", commentHeadingDelay);
 
   // Updated JavaScript code for comment submission
-  function submitComment() {
-    var nameInput = document.getElementById("nameInput");
-    var commentInput = document.getElementById("commentInput");
-    var commentSubmissionContainer = document.getElementById("commentSubmissionContainer");
-    var commentSubmissionMessage = document.getElementById("commentSubmissionMessage");
-
-    if (nameInput.value && commentInput.value) {
-      // Your existing code for submitting the comment via AJAX
-      var name = nameInput.value;
-      var comment = commentInput.value;
-
-      if (name.trim() === "" || comment.trim() === "") {
-        alert("Please enter your name and comment.");
-        return;
+  async function submitForm() {
+    const form = document.getElementById('commentForm');
+    const formData = new FormData(form);
+  
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+  
+      if (response.ok) {
+        // If the submission was successful, show the popup
+        document.getElementById('commentSubmissionContainer').style.display = 'block';
+  
+        // Hide the popup after 4 seconds
+        setTimeout(function() {
+          document.getElementById('commentSubmissionContainer').style.display = 'none';
+        }, 4000); // 4000 milliseconds = 4 seconds
+      } else {
+        // If the submission failed, log the error to the console
+        console.error('Form submission failed', response);
       }
-
-      var formData = new FormData();
-      formData.append("name", name);
-      formData.append("comment", comment);
-
-      fetch("http://localhost/send_email.php", {
-        method: "POST",
-        body: formData
-      })
-        .then(function (response) {
-          if (response.ok) {
-            // Comment submitted successfully
-            // Remove the alert message
-            // alert("Your comment has been submitted. Thank you!");
-
-            // Clear the input fields
-            nameInput.value = "";
-            commentInput.value = "";
-          } else {
-            // Error submitting the comment
-            alert("There was an error submitting your comment. Please try again later.");
-          }
-        })
-        .catch(function (error) {
-          console.error("Error:", error);
-          alert("There was an error submitting your comment. Please try again later.");
-        });
-
-      // Additional code from the new code
-      commentSubmissionMessage.innerHTML = "THANK YOU";
-      commentSubmissionContainer.classList.add("active");
-
-      // Automatically close the comment submission pop-up after 3 seconds
-      setTimeout(function () {
-        commentSubmissionContainer.classList.remove("active");
-      }, 3000);
+    } catch (error) {
+      // If an error occurred while submitting the form, log the error to the console
+      console.error('Form submission failed', error);
     }
   }
+  
+  
   function showPopupMessage(message) {
     var popupContainer = document.getElementById("popupContainer");
     var popupMessage = document.getElementById("popupMessage");
@@ -299,10 +278,9 @@
   }
 
   function closePopup() {
-    var popupContainer = document.getElementById("popupContainer");
-    popupContainer.classList.remove("active");
-    location.reload();
+    document.getElementById('commentSubmissionContainer').style.display = 'none';
   }
+  
   let currentInput = '';
   let previousInput = '';
   let operator = '';
