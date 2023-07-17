@@ -1,5 +1,5 @@
 var instructions = [
-  "Step 1: Multiply your Birthday by 4 \uD83D\uDE0D",
+  "Step 1: Multiply your Birth Date by 4 \uD83D\uDE0D",
   "Step 2: Add 7 with the result \uD83D\uDC48",
   "Step 3: Multiply the result by 3 \uD83E\uDD1F",
   "Step 4: Add your Birthday date to the result \u270A",
