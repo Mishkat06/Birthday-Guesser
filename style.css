@@ -728,7 +728,7 @@ h1 {
   position: absolute;
   top: 580px;
   left: 680px;
-  max-width: 200px;
+  max-width: 300px;
 }
 
 @media only screen and (max-width: 600px) {
