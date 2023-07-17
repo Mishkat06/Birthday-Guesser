@@ -124,7 +124,7 @@ function calculateFinalResult() {
       var remainingSeconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
     
       var message = "Your birthday is on " + monthName + " " + integerResult + ".";
-      message += "<br>Remaining time of your next birthday from now: <br>" + remainingDays + " days, " + remainingHours + " hours, " + remainingMinutes + " minutes, " + remainingSeconds + " seconds.";
+      message += "<br>The remaining time until your next birthday: <br>" + remainingDays + " days, " + remainingHours + " hours, " + remainingMinutes + " minutes, " + remainingSeconds + " seconds.";
     
       popupMessage.innerHTML = message;
     }
