@@ -2,8 +2,8 @@ var instructions = [
   "Step 1: Multiply your Birth Date by 4 \uD83D\uDE0D",
   "Step 2: Add 7 with the result \uD83D\uDC48",
   "Step 3: Multiply the result by 3 \uD83E\uDD1F",
-  "Step 4: Add your Birthday date to the result \u270A",
-  "Step 5: Add your Birthday month to the result \uD83D\uDC4C",
+  "Step4: Add your Birth date to the result \u270A",
+  "Step5: Add your Birth month to the result \uD83D\uDC4C",
   "Final Step : Enter your result:\uD83D\uDC47", // User enters their result
 ];
 
